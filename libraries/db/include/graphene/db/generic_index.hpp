@@ -70,13 +70,12 @@ namespace graphene { namespace db {
             FC_ASSERT(ok, "Could not modify object, most likely an index constraint was violated");
          }
 
-    
-         virtual void remove( const object& obj )override
+         void remove( const object& obj )override
          {
             _indices.erase( _indices.iterator_to( static_cast<const ObjectType&>(obj) ) );
          }
 
-         virtual const object* find( object_id_type id )const override
+         const object* find( object_id_type id )const override
          {
             static_assert(std::is_same<typename MultiIndexType::key_type, object_id_type>::value,
                           "First index of MultiIndexType MUST be object_id_type!");
@@ -85,7 +84,7 @@ namespace graphene { namespace db {
             return &*itr;
          }
 
-         virtual void inspect_all_objects(std::function<void (const object&)> inspector)const override
+         void inspect_all_objects(std::function<void (const object&)> inspector)const override
          {
             try {
                for( const auto& ptr : _indices )
