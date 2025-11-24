@@ -2,7 +2,7 @@
 
 The libraries are the core of the project and define everything where applications can build on top.
 
-A **graphene** blockchain software will use the `app` library to define what the application will do, what services it will offer. The blockchain is defined by the `chain` library and includes all the objects, types, operations, protocols that build current consensus blockchain. The lowest level in memory database of acloudbank is developed at the `db` library. The `fc` is a helper module broadly used in the libraries code, `egenesis` will help with the genesis file, `plugins` will be loaded optionally to the application. Wallet software like the cli_wallet will benefit from the `wallet` library.
+A **RSQUARED-graphene** blockchain software will use the `app` library to define what the application will do, what services it will offer. The blockchain is defined by the `chain` library and includes all the objects, types, operations, protocols that build current consensus blockchain. The lowest level in memory database of acloudbank is developed at the `db` library. The `fc` is a helper module broadly used in the libraries code, `egenesis` will help with the genesis file, `plugins` will be loaded optionally to the application. Wallet software like the cli_wallet will benefit from the `wallet` library.
 
 Code in libraries is the most important part of **acloudbank-core** project and it is maintained by the acloudbank Core Team and contributors.
 # Available Libraries
